@@ -1,9 +1,9 @@
-import { RateLimit, middleware } from "./RateLimit";
+import * as RateLimit from "./RateLimit";
 import { Stores } from "./stores";
 
-export * from "./RateLimit";
 export * from "./Options";
 export * from "./stores";
+export * as RateLimit from "./RateLimit";
 
 export default {
   RateLimit,
