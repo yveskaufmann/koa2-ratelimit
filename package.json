@@ -4,6 +4,7 @@
   "version": "1.1.1",
   "description": "IP rate-limiting middleware for Koajs 2. Use to limit repeated requests to APIs and/or endpoints such as password reset.",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "engines": {
     "node": ">=7.10.1"
   },
@@ -16,25 +17,26 @@
     "type": "git",
     "url": "https://github.com/ysocorp/koa2-ratelimit"
   },
-  "dependencies": {},
   "peerDependencies": {
     "mongoose": ">= 5",
     "redis": ">= 4.0.0",
     "sequelize": ">=5.8.7"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
+    "@types/mocha": "^9.1.1",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.17.0",
     "expect": "^24.8.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "prettier": "^2.7.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
   },
   "scripts": {
     "lint": "eslint src test",
-    "test": "mocha --opts mocha.opts"
+    "clean": "rm -rf ./dist",
+    "build": "tsc",
+    "test": "mocha -r ts-node/register --opts mocha.opts"
   },
   "keywords": [
     "koa2-ratelimit",
@@ -71,5 +73,9 @@
     "brute-force-sequelize",
     "brute-force-mongodb",
     "attack"
-  ]
+  ],
+  "dependencies": {
+    "@types/koa": "^2.13.4",
+    "@typescript-eslint/eslint-plugin": "^5.28.0"
+  }
 }

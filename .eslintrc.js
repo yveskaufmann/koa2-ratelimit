@@ -6,7 +6,8 @@ module.exports = {
         "es6": true
     },
     "extends": "airbnb",
-    "parser": "babel-eslint",
+    "plugins": ["@typescript-eslint"],
+    "parser": "@typescript-eslint/parser",
     "rules": {
         //"import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.spec.js"] }],
         "indent": ["error", 4],
