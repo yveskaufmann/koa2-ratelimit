@@ -3,11 +3,10 @@ const mongoose = require('mongoose');
 const Store = require('./Store.js');
 
 async function findOrCreate({ where, defaults }) {
-    return this.collection.findAndModify(
+    return this.collection.findOneAndUpdate(
         where,
-        [],
         { $setOnInsert: defaults },
-        { upsert: true, new: true }, // return new doc if one is upserted
+        { upsert: true, returnDocument: 'after' }, // return new doc if one is upserted
     );
 }
 
@@ -100,7 +99,7 @@ class MongodbStore extends Store {
 
     // remove all if time is passed
     async _removeAll() {
-        await this.Ratelimits.remove({ dateEnd: { $lte: Date.now() } });
+        await this.Ratelimits.removeMany({ dateEnd: { $lte: Date.now() } });
     }
 
     async incr(key, options, weight) {
