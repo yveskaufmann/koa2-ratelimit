@@ -3,8 +3,8 @@
   "author": "YSO CORP",
   "version": "1.1.1",
   "description": "IP rate-limiting middleware for Koajs 2. Use to limit repeated requests to APIs and/or endpoints such as password reset.",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=7.10.1"
   },
@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "@types/mocha": "^9.1.1",
+    "@types/koa": "^2.13.4",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.17.0",
     "expect": "^24.8.0",
@@ -77,8 +79,5 @@
     "brute-force-mongodb",
     "attack"
   ],
-  "dependencies": {
-    "@types/koa": "^2.13.4",
-    "@typescript-eslint/eslint-plugin": "^5.28.0"
-  }
+  "dependencies": {}
 }
