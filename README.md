@@ -1,5 +1,9 @@
 #  Koajs 2 Rate Limit (Bruteforce)
 
+> **_NOTE:_**  This is a temporarily fork of [koa2-ratelimit](https://github.com/ysocorp/koa2-ratelimit) that solves an imcompatibility to mongoose 6.x and native-mongodb-driver 4.x. 
+> 
+> This probaly not the package that you are looking, this fork only exists to solve an issue in depedend system asap.
+
 [![Build Status](https://secure.travis-ci.org/ysocorp/koa2-ratelimit.png?branch=master "Test")](http://travis-ci.org/ysocorp/koa2-ratelimit)
 [![NPM version](http://badge.fury.io/js/koa2-ratelimit.png)](https://npmjs.org/package/koa2-ratelimit "View this project on NPM")
 
@@ -9,15 +13,18 @@ Note: This module is based on [express-rate-limit](https://github.com/nfriedly/e
 
 ## Summary
 
-- [Install](#install)
-- [Usage](#usage)
-    - [Use with RedisStore](#use-with-redisStore)
+- [Koajs 2 Rate Limit (Bruteforce)](#koajs-2-rate-limit-bruteforce)
+  - [Summary](#summary)
+  - [Install](#install)
+  - [Usage](#usage)
+    - [Use with RedisStore](#use-with-redisstore)
     - [Use with SequelizeStore](#use-with-sequelizestore)
-    - [Use with MongooseStore (Mongodb)](#use-with-mongoosestore)
-- [Configuration](#configuration)
-- [Time Type](#time-type)
-- [Upgrade](#upgrade)
- - [0.9.1 to 1.0.0](#0.9.1-to-1.0.0)
+    - [Use with MongooseStore (Mongodb)](#use-with-mongoosestore-mongodb)
+  - [Configuration](#configuration)
+  - [Time Type](#time-type)
+  - [Upgrade](#upgrade)
+    - [0.9.1 to 1.0.0](#091-to-100)
+  - [License](#license)
 
 
 ## Install
