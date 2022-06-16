@@ -113,7 +113,7 @@ export class MongodbStore extends Store {
 
   // remove all if time is passed
   private async _removeAll() {
-    await this.Ratelimits.removeMany({ dateEnd: { $lte: Date.now() } });
+    await this.Ratelimits.deleteMany({ dateEnd: { $lte: Date.now() } });
   }
 
   async incr(
